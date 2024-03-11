@@ -16,7 +16,7 @@ services:
 
          - ./server:/app
       ports:
-         - 5000:5000
+         - 5006:5000
       depends_on:
          - mongodb
       environment:
@@ -68,7 +68,7 @@ services:
          - ./app/node_modules
          - ./client:/app
       # ports:
-      #    - 3000:3000
+      #    - 3006:3000
       depends_on:
          - library-api
       networks:
@@ -83,7 +83,7 @@ services:
          context: ./nginx
          dockerfile: Dockerfile
       ports:
-         - 8080:80
+         - 8086:80
       networks:
          - library-mern-api
 
