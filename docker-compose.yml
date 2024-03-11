@@ -94,3 +94,5 @@ networks:
 volumes:
    mongodb-data:
       driver: local
+   mongo-express-data:
+      driver: local
