@@ -12,7 +12,7 @@
 
 ```
 git clone https://github.com/API-Imperfect/mern_library_nginx.git
-cd mern_library_nginx
+cd mern_docker_demo
 cd server
 run the command: make build
 navigate to localhost:8080
