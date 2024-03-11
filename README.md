@@ -14,9 +14,12 @@
 git clone https://github.com/API-Imperfect/mern_library_nginx.git
 cd mern_docker_demo
 cd server
-run the command: make build
-navigate to localhost:8080
+make build
+navigate to localhost:8086
 ```
+
+
+
 
 If you prefer not using Make files
 
