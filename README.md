@@ -21,14 +21,8 @@ navigate to localhost:8086
 
 
 
-If you prefer not using Make files
 
-```
-git clone https://github.com/API-Imperfect/mern_library_nginx.git
-cd mern_library_nginx
-run the command: docker-compose up --build --remove-orphans
-navigate to localhost:8080
-```
+
 
 ## License
 
