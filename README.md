@@ -11,7 +11,7 @@
 ## Run the Application
 
 ```
-git clone https://github.com/API-Imperfect/mern_library_nginx.git
+git clone https://github.com/Krishna-skk/mern_docker_demo.git
 cd mern_docker_demo
 cd server
 make build
