@@ -9,13 +9,10 @@ services:
       container_name: library_mern_nginx
       # volumes allow sharing of data in run-time between host and container
       volumes:
-         # don't overwrite this folder in container with the local one
-         - ./server:/app
-         - /app/node_modules
          # map current local directory to the /app inside the container
-         #This is a must for development in order to update our container whenever a change to the source code is made. Without this, you would have to rebuild the image each time you make a change to source code.
-
-         #- ./server:/app
+         - ./server:/app
+         # exclude node_modules from being mounted from the host
+         - /app/node_modules
       ports:
          - 5006:5000
       depends_on:
@@ -66,8 +63,10 @@ services:
          dockerfile: Dockerfile
       container_name: library_mern_frontend
       volumes:
-         - ./app/node_modules
+         # map current local directory to the /app inside the container
          - ./client:/app
+         # exclude node_modules from being mounted from the host
+         - /app/node_modules
       # ports:
       #    - 3006:3000
       depends_on:
@@ -94,6 +93,4 @@ networks:
 
 volumes:
    mongodb-data:
-      driver: local
-   mongo-express-data:
       driver: local
